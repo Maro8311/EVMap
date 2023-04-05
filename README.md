@@ -1,6 +1,6 @@
 # My Readme
 just use
-`npm update`
+`npm install`
 
 then
 `npm run dev`
