@@ -26,7 +26,7 @@ git add .
 ```
 
 ```sh
-git commit -m "New Doc4"
+git commit -m "Some Commit Description"
 ```
 
 ```sh
