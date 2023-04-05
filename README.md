@@ -10,3 +10,8 @@ then to start server
 ```sh
 npm run dev
 ```
+
+then as the command line says:
+```sh
+http://localhost:3000
+```
