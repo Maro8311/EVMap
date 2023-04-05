@@ -15,3 +15,20 @@ then as the command line says:
 ```sh
 http://localhost:3000
 ```
+
+for me git as git greenhorn:
+```sh
+git status
+```
+
+```sh
+git add .
+```
+
+```sh
+git commit -m "New Doc4"
+```
+
+```sh
+git push
+```
