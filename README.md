@@ -1,5 +1,8 @@
 # My Readme
+The task is in den subdirectory `task-chargemap`
+
 Hey Alex, ich freue mich auf weiteren Austauch\
+
 just use
 
 ```sh
