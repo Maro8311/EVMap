@@ -1,0 +1,56 @@
+.App {
+	background-color: red;
+	width: 80%;
+	height: 700px;
+	margin-top: 20px;
+	margin-bottom: 0;
+	margin-left: 60px;
+	margin-right: auto;
+	padding: 0 0 0 10px;
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
+
+.Headline {
+	background-color: blue;
+}
+
+.InputControls {
+	background-color: green;
+	padding-top: 10px;
+}
+.form-group{
+	height: 15px;
+}
+
+.form-group label{
+	display: inline-block;
+	width: 120px;
+	margin-left: 10px;
+}	
+.form-group input{
+	width: 150px;
+}
+.Btns{
+	margin-left: 130px;
+}
+.Btns button{
+	margin-right: 20px;
+	margin-bottom: 10px;
+	padding: 3px;
+	
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.tbl td {
+  padding: 3px;	
+}
+	
+table.tbl {
+  table-layout: fixed;
+  width: 3000px;
+}
