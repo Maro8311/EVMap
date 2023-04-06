@@ -38,3 +38,8 @@ git commit -m "Some Commit Description"
 git push
 ```
 
+```sh
+https://githowto.com/staging_and_committing
+```
+
+
