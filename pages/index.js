@@ -15,7 +15,7 @@ function App() {
     const [zoom, setZoom] = useState(12);
 
     async function fetchStations(latitude, longitude, radius) {
-        const apiKey = '9961969d-8cb0-455e-8ce9-0411816b0730';
+        const apiKey = '718423ab-87a1-465a-998d-c75c38de5fe4';
         const url = `https://api.openchargemap.io/v3/poi/?output=json&latitude=${latitude}&longitude=${longitude}&distance=${radius}&distanceunit=KM&maxresults=10&compact=true&key=${apiKey}`;
         console.log(url)
         try {
