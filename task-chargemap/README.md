@@ -50,4 +50,4 @@ Connector Type Ids:
 - CCS: 33
 
 ## Wireframe
-![Wireframe](./base.png)
+![Wireframe](base.png)
