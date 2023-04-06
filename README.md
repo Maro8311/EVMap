@@ -1,7 +1,7 @@
-# My Readme
+# Find electro vehicle (EV) chargers in a defined radius
 The task is in den subdirectory `task-chargemap`
 
-Hey Alex, ich freue mich auf weiteren Austauch.
+Hey Alex, ich freue mich auf weiteren Austausch
 
 just use
 
