@@ -3,6 +3,8 @@ The task is in den subdirectory `task-chargemap`
 
 Hey Alex, ich freue mich auf weiteren Austauch\
 
+hol dir bei OpenChargeMap bitte einen neuen API-Key
+
 just use
 
 ```sh
@@ -35,3 +37,4 @@ git commit -m "Some Commit Description"
 ```sh
 git push
 ```
+
