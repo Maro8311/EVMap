@@ -15,7 +15,7 @@ function App() {
     const [zoom, setZoom] = useState(12);
 
     async function fetchStations(latitude, longitude, radius) {
-        const apiKey = '718423ab-87a1-465a-998d-c75c38de5fe4';
+        const apiKey = process.env.REACT_APP_OPENCHARGEMAP_API_KEY;
         const url = `https://api.openchargemap.io/v3/poi/?output=json&latitude=${latitude}&longitude=${longitude}&distance=${radius}&distanceunit=KM&maxresults=10&compact=true&key=${apiKey}`;
         console.log(url)
         try {
