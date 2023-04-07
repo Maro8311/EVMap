@@ -72,7 +72,7 @@ function App() {
                 <LocationInput location={locationName} setLocation={setLocationName} radius={radius} setRadius={setRadius} handleFormSubmit={handleFormSubmit} handleReset={handleReset} />
             </div>
 
-            <EVMap stations={stations} center={center} zoom={zoom} />
+            <EVMap stations={stations} center={center} zoom={zoom} radius={radius}/>
 
             {/*<StationList stations={stations} />*/}
         </div>
