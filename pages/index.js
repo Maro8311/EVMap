@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState } from 'react';
 import LocationInput from '../components/LocationInput';
 import StationList from '../components/StationList';
 import dynamic from 'next/dynamic';
@@ -15,9 +15,10 @@ function App() {
     const [zoom, setZoom] = useState(12);
 
     async function fetchStations(latitude, longitude, radius) {
-        const apiKey = process.env.REACT_APP_OPENCHARGEMAP_API_KEY;
+        const apiKey = process.env.OPENCHARGEMAP_API_KEY;
         const url = `https://api.openchargemap.io/v3/poi/?output=json&latitude=${latitude}&longitude=${longitude}&distance=${radius}&distanceunit=KM&maxresults=10&compact=true&key=${apiKey}`;
-        console.log(url)
+        //console.log(url)
+        // console.log(`apiKey - ${apiKey}`);
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -60,7 +61,7 @@ function App() {
         setRadius(10);
         setLocationName('');
         setStations([]);
-        setCenter([52.520008, 13.404954]); // Reset center to Berlin coordinates
+        // setCenter([52.520008, 13.404954]); // Reset center to Berlin coordinates
     };
 
     return (

@@ -1,14 +1,18 @@
 .App {
 	background-color: red;
 	width: 80%;
-	height: 700px;
-	margin-top: 20px;
+	/* height: 1000px; */
+	/* margin-top: 20px; */
 	margin-bottom: 0;
 	margin-left: 60px;
 	margin-right: auto;
 	padding: 0 0 0 10px;
-	overflow-x: scroll;
-	overflow-y: scroll;
+	/* overflow-x: scroll; */
+	/* overflow-y: scroll; */
+}
+
+.map {
+	/* height: 600px; */
 }
 
 /*Css to target the dropdownbox*/
