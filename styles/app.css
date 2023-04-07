@@ -11,6 +11,26 @@
 	overflow-y: scroll;
 }
 
+/*Css to target the dropdownbox*/
+ul.ui-autocomplete {
+	background-color: white;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position: absolute;
+	z-index: 1000;
+	list-style-position: inside;
+	cursor: pointer;
+}
+
+ul li {
+	padding-left: 10px;
+}
+
+ul li:hover,
+ul li:focus {
+	color: red;
+}
+
 .Headline {
 	background-color: blue;
 }
@@ -19,38 +39,44 @@
 	background-color: green;
 	padding-top: 10px;
 }
-.form-group{
+
+.form-group {
 	height: 15px;
 }
 
-.form-group label{
+.form-group label {
 	display: inline-block;
 	width: 120px;
 	margin-left: 10px;
-}	
-.form-group input{
+}
+
+.form-group input {
 	width: 150px;
 }
-.Btns{
+
+.Btns {
 	margin-left: 130px;
 }
-.Btns button{
+
+.Btns button {
 	margin-right: 20px;
 	margin-bottom: 10px;
 	padding: 3px;
-	
+
 }
 
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
 }
 
 table.tbl td {
-  padding: 3px;	
+	padding: 3px;
 }
-	
+
 table.tbl {
-  table-layout: fixed;
-  width: 3000px;
+	table-layout: fixed;
+	width: 3000px;
 }

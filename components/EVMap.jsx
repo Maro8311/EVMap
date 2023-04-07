@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl, CircleMarker, Popup, useMap } from 'react-leaflet';
 
 function ChangeView({ center, zoom }) {
     const map = useMap();
@@ -9,7 +9,8 @@ function ChangeView({ center, zoom }) {
 function EVMap({ stations, center, zoom }) {
     return (
         <div className="map">
-            <MapContainer center={center} zoom={zoom} style={{ height: '500px' }}>
+            <MapContainer center={center} zoom={zoom} zoomControl={false} style={{ height: '500px' }}>
+                <ZoomControl position="topright" />
                 <ChangeView center={center} zoom={zoom} />
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 {stations.map(station => (
