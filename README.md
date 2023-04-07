@@ -19,7 +19,8 @@ then as the command line says:
 http://localhost:3000
 ```
 
-for me git as git greenhorn:
+for me as git n00b:
+
 ```sh
 git status
 ```
