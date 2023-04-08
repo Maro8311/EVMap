@@ -1,4 +1,4 @@
-import {useState } from 'react';
+import { useState } from 'react';
 import LocationInput from '../components/LocationInput';
 import StationList from '../components/StationList';
 import dynamic from 'next/dynamic';
@@ -14,24 +14,30 @@ function App() {
     const [center, setCenter] = useState([52.520008, 13.404954]); // Berlin coordinates
     const [zoom, setZoom] = useState(12);
 
-    async function fetchStations(latitude, longitude, radius) {
-        const apiKey = process.env.OPENCHARGEMAP_API_KEY;
-        const url = `https://api.openchargemap.io/v3/poi/?output=json&latitude=${latitude}&longitude=${longitude}&distance=${radius}&distanceunit=KM&maxresults=10&compact=true&key=${apiKey}`;
-        //console.log(url)
-        // console.log(`apiKey - ${apiKey}`);
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            setStations(data);
-            if (data.length > 0) {
-                setCenter([data[0].AddressInfo?.Latitude || 0, data[0].AddressInfo?.Longitude || 0]);
-                setZoom(12);
-            }
-        } catch (error) {
-            console.error(error);
-            setStations([]);
-        }
+    async function fetchStations(latitude, longitude, radius, maxresults = 20) {
+    if (!locationName) {
+        setStations([]);
+        setCenter([latitude, longitude]);
+        return;
     }
+
+    const apiKey = process.env.OPENCHARGEMAP_API_KEY;
+    const url = `https://api.openchargemap.io/v3/poi/?output=json&latitude=${latitude}&longitude=${longitude}&distance=${radius}&distanceunit=KM&maxresults=${maxresults}&compact=true&key=${apiKey}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setStations(data);
+        if (data.length > 0) {
+            setCenter([data[0].AddressInfo?.Latitude || 0, data[0].AddressInfo?.Longitude || 0]);
+            setZoom(12);
+        }
+    } catch (error) {
+        console.error(error);
+        setStations([]);
+    }
+}
+
 
     async function getCoordinates(locationName) {
         const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${locationName}&format=json`);
@@ -73,7 +79,7 @@ function App() {
                 <LocationInput location={locationName} setLocation={setLocationName} radius={radius} setRadius={setRadius} handleFormSubmit={handleFormSubmit} handleReset={handleReset} />
             </div>
 
-            <EVMap stations={stations} center={center} zoom={zoom} radius={radius}/>
+            <EVMap stations={stations} funcNewStations={fetchStations} center={center} zoom={zoom} radius={radius} />
 
             {/*<StationList stations={stations} />*/}
         </div>
