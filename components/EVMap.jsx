@@ -4,7 +4,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
-function EVMap({ stations, funcNewStations, center, zoom, radius }) {
+// ToDO: center, zoom als lokale States
+function EVMap({ _locationName, stations, funcNewStations, center, setCenter, zoom, radius }) {
     const mapContainer = useRef(null);
     const [map, setMap] = useState(null);
     const [markers, setMarkers] = useState([]);
@@ -26,7 +27,8 @@ function EVMap({ stations, funcNewStations, center, zoom, radius }) {
         map.on('dragend', () => {
             const { lng, lat } = map.getCenter();
             const newCenter = [lat, lng];
-            funcNewStations(newCenter[0], newCenter[1], radius, radius*2);
+            setCenter(newCenter);
+            funcNewStations(_locationName, newCenter[0], newCenter[1], radius, radius*2);
             // console.log('A dragend event occurred.');
         });
 
