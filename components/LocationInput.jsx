@@ -63,8 +63,8 @@ function LocationInput({ location, setLocation, radius, setRadius, handleFormSub
         />
         {suggestions.length > 0 && (
           <ul className='ui-autocomplete'>
-            {suggestions.map(suggestion => (
-              <li key={suggestion} onClick={() => handleSuggestionClick(suggestion)}>
+            {suggestions.map((suggestion, index) => (
+              <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
                 {suggestion}
               </li>
             ))}
