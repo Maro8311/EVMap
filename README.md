@@ -6,7 +6,7 @@ Hey Alex, ich freue mich auf weiteren Austausch
 just use
 
 ```sh
-npm install
+npm i
 ```
 
 then to start server
@@ -37,8 +37,6 @@ git commit -m "Some Commit Description"
 git push
 ```
 
-```sh
 https://githowto.com/staging_and_committing
-```
 
 
